@@ -1,0 +1,68 @@
+Here's a minimal HTML, CSS, and JavaScript app, all contained within a single `index.html` file, that fulfills your brief.
+
+This approach keeps everything self-contained for maximum minimalism in terms of file count, while clearly demonstrating the use of HTML for structure, CSS for styling, and JavaScript for dynamic content injection.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshat's Greeting</title>
+    <style>
+        /* Minimal CSS for centering and basic styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Make body at least viewport height */
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #0056b3; /* A nice shade of blue */
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #cceeff;
+            border-radius: 8px;
+            background-color: #e6f7ff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="greeting-message"></h1>
+
+    <script>
+        // Minimal JavaScript to set the greeting text
+        document.addEventListener('DOMContentLoaded', () => {
+            const greetingElement = document.getElementById('greeting-message');
+            if (greetingElement) {
+                greetingElement.textContent = "Hello from Akshat's PC";
+            }
+        });
+    </script>
+</body>
+</html>
+```
+
+### How to use it:
+
+1.  **Save:** Copy the entire code above and save it as `index.html` (or any other `.html` filename) on your computer.
+2.  **Open:** Open the saved `index.html` file in any web browser.
+
+You will see a simple web page displaying "Hello from Akshat's PC" centered on the screen, styled with a light blue background and border.
+
+### Breakdown:
+
+*   **HTML (`<!DOCTYPE html>...<body>...<h1 id="greeting-message"></h1>`)**: Provides the basic structure of the page and a placeholder `<h1>` tag where our message will appear.
+*   **CSS (`<style>...</style>`)**: Embedded within the `<head>` tag, this block contains minimal styles to:
+    *   Set a basic font.
+    *   Use Flexbox to center the `<h1>` vertically and horizontally on the page.
+    *   Add some colors, padding, and a border/shadow for visual appeal.
+*   **JavaScript (`<script>...</script>`)**: Embedded at the end of the `<body>`, this script block:
+    *   Uses `document.addEventListener('DOMContentLoaded', ...)` to ensure the HTML elements are fully loaded before trying to access them.
+    *   Gets a reference to the `<h1>` element using its `id="greeting-message"`.
+    *   Sets its `textContent` property to "Hello from Akshat's PC", dynamically injecting the text onto the page.
